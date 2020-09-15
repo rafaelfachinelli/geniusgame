@@ -3,12 +3,12 @@
 <p>
 
 <p align="center"> 
-  <img alt="Tamanho do Repositório" src="https://img.shields.io/github/repo-size/rafaelfachinelli/geniusgame?color=F2994A&style=for-the-badge">
-  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/rafaelfachinelli/geniusgame?color=F2994A&style=for-the-badge">
+  <img alt="Tamanho do Repositório" src="https://img.shields.io/github/repo-size/rafaelfachinelli/geniusgame?color=219653&style=for-the-badge">
+  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/rafaelfachinelli/geniusgame?color=EB5757&style=for-the-badge">
   <a href="https://github.com/rafaelfachinelli">
-    <img alt="Feito por Rafael Fachinelli" src="https://img.shields.io/badge/Desenvolvedor-Rafael_Fachinelli-%F2994A?color=F2994A&style=for-the-badge">
+    <img alt="Feito por Rafael Fachinelli" src="https://img.shields.io/badge/Desenvolvedor-Rafael_Fachinelli-%F2C94C?color=F2C94C&style=for-the-badge">
   </a>
-  <img alt="Licença do Projeto" src="https://img.shields.io/github/license/rafaelfachinelli/Proffy?color=F2994A&style=for-the-badge"/>
+  <img alt="Licença do Projeto" src="https://img.shields.io/github/license/rafaelfachinelli/Proffy?color=2F80ED&style=for-the-badge"/>
 <p>
 
 <p align="center">
