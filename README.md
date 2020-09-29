@@ -41,6 +41,8 @@ Jogo da memória inpirado no clássico GENIUS. O objetivo é acertar a sequênci
 ## :memo: **Roteiro**
 
 <div align="center">
+<details>
+<summary>Clique para Ver</summary>
 
 |      Estado      |     Plataforma   |     Tarefa    |
 |      :---:       |       :---:      |      :---     |
@@ -52,6 +54,7 @@ Jogo da memória inpirado no clássico GENIUS. O objetivo é acertar a sequênci
 |:heavy_check_mark:|:computer:        |Controle de tempo para acionamentos|
 |:x:|:computer:        |Refinação no visual|
 
+</details>
 </div>
 
 ---
