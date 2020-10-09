@@ -69,11 +69,17 @@ body {
 }
 
 .button__start {
-  height: 2.5rem;
-  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .5rem;
+  
   background: #2980b9;
+  font: 400 1.6rem Archivo;
   color: aliceblue;
+  cursor: pointer;
+  border: none;
+  border-radius: .5rem;
   outline: none;
   text-decoration: none;
-  border: none;
 }
