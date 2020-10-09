@@ -1,104 +1,97 @@
-let order = [];
-let clickedOrder = [];
-let score = 0;
+const blueElement = document.querySelector('.genius__blue');
+const yellowElement = document.querySelector('.genius__yellow');
+const redElement = document.querySelector('.genius__red');
+const greenElement = document.querySelector('.genius__green');
 
-//0 - Verde
-//1 - Vermelho
-//2 - Amarelo
-//3 - Azul
+const startButtonElement = document.querySelector('.button__start');
 
-const geniusGreen = document.querySelector('.genius__green');
-const geniusRed = document.querySelector('.genius__red');
-const geniusYellow = document.querySelector('.genius__yellow');
-const geniusBlue = document.querySelector('.genius__blue');
+let playerColorsOrder = [];
+let gameColorsOrder = [];
 
-//Criar ordem aleatória de cores
-const shuffleOrder = () => {
-  const colorOrder = Math.floor(Math.random() * 4);
-  order[order.length] = colorOrder;
-  clickedOrder = [];
+//0 -> Blue
+//1 -> Yellow
+//2 -> Red
+//3 -> Green
 
-  for(let i in order) {
-    lightColor(createColorElement(order[i]), Number(i) + 1);
+const startGame = () => {
+  resetPlayerColorsOrder();
+  resetGameColorsOrder();
+  newColorToOrder();
+}
+
+const checkPlayerMove = (colorNumber) => {
+  addColorClicked(colorNumber);
+  console.log("playerColorsOrder: ", playerColorsOrder);
+  
+  if (!isPlayerColorsOrderCorrect()) {
+    gameOver();
+  } else if (isPlayerColorsOrderFinished()) {
+    nextGameRound();
   }
 }
 
-
-//Acender a próxima cor
-const lightColor = (element, number) => {
-  number = number * 500;
-
-  setTimeout(() => {
-    element.classList.add('genius__selected');
-  }, number - 250);
-
-  setTimeout(() => {
-    element.classList.remove('genius__selected');
-  }, 700);
-
+const addColorClicked = (colorNumber) => {
+  playerColorsOrder.push(colorNumber);
 }
 
-//Checar os botões clicados
-const checkOrder = () => {
-  for(let i in clickedOrder) {
-    if(clickedOrder[i] != order[i]) {
-      gameOver();
-      break;
+const isPlayerColorsOrderFinished = () => {
+  const result = playerColorsOrder.length == gameColorsOrder.length ? true : false;
+  console.log("isPlayerColorsOrderFinished:", result);
+  return result;
+}
+
+const gameOver = () => {
+  resetGameColorsOrder();
+  resetPlayerColorsOrder();
+  console.log("GAME OVER! gameColorsOrder: ", gameColorsOrder);
+}
+
+const resetGameColorsOrder = () => {
+  gameColorsOrder = [];
+}
+
+const resetPlayerColorsOrder = () => {
+  playerColorsOrder = [];
+}
+
+const nextGameRound = () => {
+  newColorToOrder();
+  resetPlayerColorsOrder();
+}
+
+const isPlayerColorsOrderCorrect = () => {
+  for(let i in playerColorsOrder) {
+    if (playerColorsOrder[i] != gameColorsOrder[i]) {
+      console.log("isPlayerColorsOrderCorrect: false")
+      return false;
     }
   }
-
-  if(clickedOrder.length == order.length) {
-    alert(`Pontuação: ${score} Iniciando próxima rodada...`);
-    nextLevel();
-  }
+  console.log("isPlayerColorsOrderCorrect: true")
+  return true;
 }
 
-//Clique do jogador
-const playerClick = (color) => {
-  clickedOrder[clickedOrder.length] = color;
-  createColorElement(color).classList.add('genius__selected');
-
-  setTimeout(() => {
-    createColorElement(color).classList.remove('genius__selected');
-    checkOrder();
-  }, 100);
-
+const newColorToOrder = () => {
+  const randomColorNumber = Math.floor(Math.random() * 4);
+  gameColorsOrder.push(randomColorNumber);
+  console.log("gameColorsOrder: ", gameColorsOrder);
 }
 
-//Retorno de cor
-const createColorElement = (color) => {
-  if (color == 0) return geniusGreen;
-  if (color == 1) return geniusRed;
-  if (color == 2) return geniusYellow;
-  if (color == 3) return geniusBlue;
-}
+startButtonElement.addEventListener('click', () => {
+  startGame();
+});
 
-//Níveis de jogo
-const nextLevel = () => {
-  score++;
-  shuffleOrder();
-}
+blueElement.addEventListener('click', () => {
+  checkPlayerMove(0);
+});
 
-//Game Over
-const gameOver = () => {
-  alert(`Pontuação: ${score} GAME OVER`);
-  order = [];
-  clickedOrder = [];
+yellowElement.addEventListener('click', () => {
+  checkPlayerMove(1);
+});
 
-  playGame();
-}
+redElement.addEventListener('click', () => {
+  checkPlayerMove(2);
+});
 
-//Iniciar jogo
-const playGame = () => {
-  alert('Bem vindo ao GENIUS, iniciando novo jogo...');
-  score = 0;
-
-  nextLevel();
-}
-
-geniusGreen.onclick = () => playerClick(0);
-geniusRed.onclick = () => playerClick(1);
-geniusYellow.onclick = () => playerClick(2);
-geniusBlue.onclick = () => playerClick(3);
-
-playGame();
+greenElement.addEventListener('click', () => {
+  checkPlayerMove(3);
+});
