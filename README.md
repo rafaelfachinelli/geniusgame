@@ -52,7 +52,7 @@ Jogo da memória inpirado no clássico GENIUS. O objetivo é acertar a sequênci
 |:heavy_check_mark:|:computer:        |Controle de repetição|
 |:heavy_check_mark:|:computer:        |Início e fim do jogo programado|
 |:heavy_check_mark:|:computer:        |Controle de tempo para acionamentos|
-|:x:|:computer:        |Refinação no visual|
+|:heavy_check_mark:|:computer:        |Refinação no visual|
 
 </details>
 </div>
