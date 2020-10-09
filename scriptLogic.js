@@ -18,6 +18,7 @@ const startGame = () => {
   resetGameColorsOrder();
   newColorToOrder();
   showGameColorsOrder();
+  showGameScore();
 }
 
 const checkPlayerMove = (colorNumber) => {
@@ -84,6 +85,10 @@ const showGameColorsOrder = () => {
       addClassEffectGameBlock(gameColorsOrder[i]);
     }, 1500 * i);
   }
+}
+
+const showGameScore = () => {
+  
 }
 
 startButtonElement.addEventListener('click', () => {

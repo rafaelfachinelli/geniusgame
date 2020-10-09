@@ -5,20 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css">
   <link href="https://fonts.googleapis.com/css2?family=Archivo&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
   <title>Rafael Fachinelli | GENIUS Game</title>
   <script src="./scriptLogic.js" defer></script>
   <script src="./scriptStyle.js" defer></script>
 </head>
 <body>
-  <div class="main__game">
-    <div class="game__genius">
-      <div class="genius__block genius--blue"></div>
-      <div class="genius__block genius--yellow"></div>
-      <div class="genius__block genius--red"></div>
-      <div class="genius__block genius--green"></div>
-    </div>
-    <div class="game__buttons">
-      <a class="button__start">Start New</a>
+  <div class="container">
+    <div class="main__game">
+      <div class="game__logo">
+        <img src="./images/geniusLogo.svg" alt="GENIUS Game">
+      </div>
+      <div class="game__score">
+        <span class="score__text">SCORE</span>
+        <span class="score__points">000</span>
+      </div>
+      <div class="game__genius">
+        <div class="genius__block genius--blue"></div>
+        <div class="genius__block genius--yellow"></div>
+        <div class="genius__block genius--red"></div>
+        <div class="genius__block genius--green"></div>
+      </div>
+      <div class="game__buttons">
+        <a class="button__start">START</a>
+      </div>
+      <div class="game__footer">
+        <a href="https://www.linkedin.com/in/rafaelfachinelli/" target="_blank">
+          © 2020 Rafael Fachinelli
+        </a>
+        <img src="./images/rflLogo.svg" alt="Rafael Fachinelli">
+      </div>
     </div>
   </div>
 </body>
