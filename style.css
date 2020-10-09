@@ -18,7 +18,7 @@ body {
 .main__game {
   padding: 1rem;
 
-  background-color: #34495e;
+  background: #34495e;
   border-radius: .5rem;
 }
 
@@ -42,7 +42,7 @@ body {
   transition: 1s;
   margin-bottom: 1rem;
 
-  background-color: #2c3e50;
+  background: #2c3e50;
   color: #e74c3c;
   border-bottom-left-radius: .5rem;
   border-bottom-right-radius: .5rem;
@@ -139,6 +139,10 @@ body {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  padding: .2rem;
+
+  background: #2c3e50;
+  border-radius: .5rem;
 }
 
 .game__footer a {
@@ -150,5 +154,4 @@ body {
 .game__footer img {
   width: 1.5rem;
   height: 1.rem;
-
 }

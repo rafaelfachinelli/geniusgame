@@ -8,12 +8,15 @@ const startButtonElement = document.querySelector('.button__start');
 let playerColorsOrder = [];
 let gameColorsOrder = [];
 
+let scorePoints = 0;
+
 //0 -> Blue
 //1 -> Yellow
 //2 -> Red
 //3 -> Green
 
 const startGame = () => {
+  resetPoints();
   resetPlayerColorsOrder();
   resetGameColorsOrder();
   newColorToOrder();
@@ -43,6 +46,7 @@ const isPlayerColorsOrderFinished = () => {
 }
 
 const gameOver = () => {
+  resetPoints();
   resetGameColorsOrder();
   resetPlayerColorsOrder();
   console.log("GAME OVER! gameColorsOrder: ", gameColorsOrder);
@@ -60,6 +64,15 @@ const nextGameRound = () => {
   resetPlayerColorsOrder();
   newColorToOrder();
   showGameColorsOrder();
+  addPoint();
+}
+
+const addPoint = () => {
+  scorePoints++;
+}
+
+const resetPoints = () => {
+  scorePoints = 0;
 }
 
 const isPlayerColorsOrderCorrect = () => {
@@ -88,7 +101,7 @@ const showGameColorsOrder = () => {
 }
 
 const showGameScore = () => {
-  
+
 }
 
 startButtonElement.addEventListener('click', () => {
