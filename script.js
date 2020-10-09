@@ -35,7 +35,6 @@ const startGame = () => {
 
 const checkPlayerMove = (colorNumber) => {
   addColorClicked(colorNumber);
-  console.log("playerColorsOrder: ", playerColorsOrder);
   
   if (!isPlayerColorsOrderCorrect()) {
     gameOver();
@@ -50,7 +49,6 @@ const addColorClicked = (colorNumber) => {
 
 const isPlayerColorsOrderFinished = () => {
   const result = playerColorsOrder.length == gameColorsOrder.length ? true : false;
-  console.log("isPlayerColorsOrderFinished:", result);
   return result;
 }
 
@@ -61,7 +59,6 @@ const gameOver = () => {
   statusState('start', false);
   statusState('wait', false);
   statusState('player', false);
-  console.log("GAME OVER! gameColorsOrder: ", gameColorsOrder);
 }
 
 const resetGameColorsOrder = () => {
@@ -92,23 +89,19 @@ const resetPoints = () => {
 const isPlayerColorsOrderCorrect = () => {
   for(let i in playerColorsOrder) {
     if (playerColorsOrder[i] != gameColorsOrder[i]) {
-      console.log("isPlayerColorsOrderCorrect: false")
       return false;
     }
   }
-  console.log("isPlayerColorsOrderCorrect: true")
   return true;
 }
 
 const newColorToOrder = () => {
   const randomColorNumber = Math.floor(Math.random() * 4);
   gameColorsOrder.push(randomColorNumber);
-  console.log("gameColorsOrder: ", gameColorsOrder);
 }
 
 const showGameColorsOrder = () => {
   setPlayerTime(false);
-  console.info("setPlayerTime", false);
   statusState('wait', true);
   statusState('player', false);
 
@@ -119,7 +112,6 @@ const showGameColorsOrder = () => {
       if (i == gameColorsOrder.length-1) {
         setTimeout(() => {
           setPlayerTime(true);
-          console.info("setPlayerTime", true);
           statusState('wait', false);
           statusState('player', true);
         }, 500);
