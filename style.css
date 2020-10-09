@@ -18,11 +18,14 @@ body {
     'green red'
     'yellow blue';
   gap: 10px;
-  border: 1px solid white;
-  background-color: white;
+  background-color: black;
   border-radius: 50%;
   width: 25rem;
   height: 25rem;
+}
+
+.genius__block {
+  transition: .2s;
 }
 
 .genius--blue {
@@ -49,8 +52,9 @@ body {
   border-top-left-radius: 100%;
 }
 
-.genius--light {
+.genius__block:hover {
   opacity: 0.4;
+  transform: scale(1.05);
 }
 
 .game__buttons {
