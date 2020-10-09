@@ -55,8 +55,9 @@ const resetPlayerColorsOrder = () => {
 }
 
 const nextGameRound = () => {
-  newColorToOrder();
   resetPlayerColorsOrder();
+  newColorToOrder();
+  showGameColorsOrder();
 }
 
 const isPlayerColorsOrderCorrect = () => {
@@ -74,6 +75,14 @@ const newColorToOrder = () => {
   const randomColorNumber = Math.floor(Math.random() * 4);
   gameColorsOrder.push(randomColorNumber);
   console.log("gameColorsOrder: ", gameColorsOrder);
+}
+
+const showGameColorsOrder = () => {
+  for (let i in gameColorsOrder) {
+    setTimeout(() => {
+      addClassEffectGameBlock(gameColorsOrder[i]);
+    }, 1500 * i);
+  }
 }
 
 startButtonElement.addEventListener('click', () => {

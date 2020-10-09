@@ -8,6 +8,34 @@ const soundBeep = () => {
   snd.play();
 }
 
+const addClassEffectGameBlock = (colorNumber) => {
+
+  let colorElement;
+
+  switch(colorNumber){
+    case 0:
+      colorElement = blueElement;
+      break;
+    case 1:
+      colorElement = yellowElement;
+      break;
+    case 2:
+      colorElement = redElement;
+      break;
+    case 3:
+      colorElement = greenElement;
+      break;
+  }
+
+  setTimeout(() => {
+    colorElement.classList.add('genius__show');
+  }, 300);
+
+  setTimeout(() => {
+    colorElement.classList.remove('genius__show');
+  }, 700);
+}
+
 startButtonElement.addEventListener('click', () => {
   soundBeep();
 });
