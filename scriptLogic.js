@@ -1,7 +1,7 @@
-const blueElement = document.querySelector('.genius__blue');
-const yellowElement = document.querySelector('.genius__yellow');
-const redElement = document.querySelector('.genius__red');
-const greenElement = document.querySelector('.genius__green');
+const blueElement = document.querySelector('.genius--blue');
+const yellowElement = document.querySelector('.genius--yellow');
+const redElement = document.querySelector('.genius--red');
+const greenElement = document.querySelector('.genius--green');
 
 const startButtonElement = document.querySelector('.button__start');
 

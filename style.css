@@ -25,31 +25,31 @@ body {
   height: 25rem;
 }
 
-.genius__blue {
+.genius--blue {
   grid-area: blue;
   background-color: blue;
   border-bottom-right-radius: 100%; 
 }
 
-.genius__red {
+.genius--red {
   grid-area: red;
   background-color: red;
   border-top-right-radius: 100%;
 }
 
-.genius__yellow {
+.genius--yellow {
   grid-area: yellow;
   background-color: yellow;
   border-bottom-left-radius: 100%;
 }
 
-.genius__green {
+.genius--green {
   grid-area: green;
   background-color: green;
   border-top-left-radius: 100%;
 }
 
-.genius__selected {
+.genius--light {
   opacity: 0.4;
 }
 
