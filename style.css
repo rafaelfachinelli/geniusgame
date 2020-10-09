@@ -55,7 +55,6 @@ body {
 
 .genius__block:hover {
   opacity: 0.4;
-  transform: scale(1.05);
 }
 
 .genius__show {
