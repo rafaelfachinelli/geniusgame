@@ -8,8 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="./images/geniusLogo.svg" type="image/x-icon">
   <title>Rafael Fachinelli | GENIUS Game</title>
-  <script src="./scriptLogic.js" defer></script>
-  <script src="./scriptStyle.js" defer></script>
+  <script src="./script.js" defer></script>
 </head>
 <body>
   <div class="container">
@@ -19,7 +18,15 @@
       </div>
       <div class="game__score">
         <span class="score__text">SCORE</span>
-        <span class="score__points">000</span>
+        <span class="score__points">---</span>
+      </div>
+      <div class="game__status">
+        <span class="status status--start"></span>
+        <span class="status__text">start</span>
+        <span class="status status--wait"></span>
+        <span class="status__text">wait</span>
+        <span class="status status--player"></span>
+        <span class="status__text">player</span>
       </div>
       <div class="game__genius">
         <div class="genius__block genius--blue"></div>

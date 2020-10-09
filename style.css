@@ -56,6 +56,53 @@ body {
   font: 400 3rem VT323;
 }
 
+.game__status {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+
+.status {
+  width: .7rem;
+  height: .7rem;
+  transition: .2s;
+
+  background: #333;
+  border-radius: 50%;
+}
+
+.status__text {
+  color: #ecf0f1;
+  font: 400 1rem Archivo;
+}
+
+.status--start {
+}
+
+.status--wait {
+}
+
+.status--player {
+}
+
+.status__light--start {
+  background: #2ecc71;
+  box-shadow: 0 0 .2rem .2rem #27ae60;
+}
+
+.status__light--wait {
+  background: #e74c3c;
+  box-shadow: 0 0 .2rem .2rem #c0392b;
+}
+
+.status__light--player {
+  background: #3498db;
+  box-shadow: 0 0 .2rem .2rem #2980b9;
+}
+
 .game__genius {
   display: grid;
   grid-template-areas: 
@@ -121,7 +168,7 @@ body {
   transition: .2s;
   z-index: 1;
   
-  background: #2980b9;
+  background: #27ae60;
   font: 400 1.6rem Archivo;
   color: aliceblue;
   cursor: pointer;
@@ -132,7 +179,7 @@ body {
 }
 
 .button__start:hover {
-  background: #3498db;
+  background: #2ecc71;
 }
 
 .game__footer {
