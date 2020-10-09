@@ -17,6 +17,7 @@ const startGame = () => {
   resetPlayerColorsOrder();
   resetGameColorsOrder();
   newColorToOrder();
+  showGameColorsOrder();
 }
 
 const checkPlayerMove = (colorNumber) => {
