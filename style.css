@@ -73,6 +73,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: .5rem;
+  transition: .2s;
   
   background: #2980b9;
   font: 400 1.6rem Archivo;
@@ -82,4 +83,8 @@ body {
   border-radius: .5rem;
   outline: none;
   text-decoration: none;
+}
+
+.button__start:hover {
+  filter: invert();
 }
