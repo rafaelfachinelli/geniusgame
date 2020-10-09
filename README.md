@@ -64,6 +64,7 @@ Jogo da memória inpirado no clássico GENIUS. O objetivo é acertar a sequênci
 
 <p align="center">
   <kbd><img alt="GENIUS Game" src="./.github/desktop_demo.gif"/></kbd>
+  <kbd><img alt="GENIUS Game" src="./.github/desktop_demo2.gif"/></kbd>
 <p>
 
 ---
