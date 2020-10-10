@@ -1,4 +1,4 @@
-(function(){
+(function(){ //Closure Protect
   const blueElement = document.querySelector('.genius--blue');
   const yellowElement = document.querySelector('.genius--yellow');
   const redElement = document.querySelector('.genius--red');
