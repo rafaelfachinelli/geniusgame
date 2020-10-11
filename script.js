@@ -122,7 +122,7 @@
             setPlayerTime(true);
             statusState('wait', false);
             statusState('player', true);
-          }, 500);
+          }, 300);
         }
       }, 1700 * (i/3));
     }
