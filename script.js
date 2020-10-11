@@ -33,7 +33,7 @@
     setTimeout(()=> {
       newColorToOrder();
       showGameColorsOrder();
-    }, 1500)
+    }, 1000)
   }
   
   const checkPlayerMove = (colorNumber) => {
@@ -122,7 +122,7 @@
             statusState('player', true);
           }, 500);
         }
-      }, 1500 * (i/3));
+      }, 1700 * (i/3));
     }
   
   }
