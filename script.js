@@ -4,7 +4,9 @@
   const redElement = document.querySelector('.genius--red');
   const greenElement = document.querySelector('.genius--green');
   
-  const scorePointsElement = document.querySelector('.score__points');
+  const scorePointsLastElement = document.querySelector('.points__last');
+  const scorePointsActualElement = document.querySelector('.points__actual');
+  const scorePointsBestElement = document.querySelector('.points__best');
 
   const statusStartElement = document.querySelector('.status--start');
   const statusWaitElement = document.querySelector('.status--wait');
@@ -17,7 +19,10 @@
   let playerColorsOrder = [];
   let gameColorsOrder = [];
   
-  let scorePoints = 0;
+  let scorePointsLast = 0;
+  let scorePointsActual = 0;
+  let scorePointsBest = 0;
+
   let playerTime = false;
   
   //0 -> Blue
@@ -29,7 +34,7 @@
   
   const startGame = () => {
     statusState('start', true);
-    resetPoints();
+    resetScorePointActual();
     resetPlayerColorsOrder();
     resetGameColorsOrder();
     newColorToOrder();
@@ -58,12 +63,21 @@
   }
   
   const gameOver = () => {
-    resetPoints();
+    saveScorePointsLastBest();
+    resetScorePointActual();
     resetGameColorsOrder();
     resetPlayerColorsOrder();
     statusState('start', false);
     statusState('wait', false);
     statusState('player', false);
+  }
+
+  const saveScorePointsLastBest = () => {
+    scorePointsLastElement.innerText = scorePointsActual;
+    if (scorePointsActual > scorePointsBest) {
+      scorePointsBest = scorePointsActual;
+      scorePointsBestElement.innerText = scorePointsBest;
+    }
   }
   
   const resetGameColorsOrder = () => {
@@ -86,13 +100,13 @@
   }
   
   const addPoint = () => {
-    scorePoints++;
-    scorePointsElement.innerText = scorePoints;
+    scorePointsActual++;
+    scorePointsActualElement.innerText = scorePointsActual;
   }
   
-  const resetPoints = () => {
-    scorePoints = 0;
-    scorePointsElement.innerText = "---";
+  const resetScorePointActual = () => {
+    scorePointsActual = 0;
+    scorePointsActualElement.innerText = "---";
   }
   
   const isPlayerColorsOrderCorrect = () => {

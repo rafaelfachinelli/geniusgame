@@ -49,11 +49,44 @@ body {
 }
 
 .score__text {
-  font: 400 2.4rem VT323;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.text__last {
+
+  font: 400 1.8rem VT323;
+}
+
+.text__actual {
+
+  font: 400 2.3rem VT323;
+}
+
+.text__best {
+
+  font: 400 1.8rem VT323;
 }
 
 .score__points {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.points__last {
+  font: 400 2rem VT323;
+}
+
+.points__actual {
   font: 400 3rem VT323;
+}
+
+.points__best {
+  font: 400 2rem VT323;
 }
 
 .game__status {
