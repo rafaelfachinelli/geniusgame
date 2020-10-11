@@ -193,13 +193,11 @@
         break;
     }
   
-    setTimeout(() => {
-      colorElement.classList.add('genius__show');
-    }, 300);
+    colorElement.classList.add('genius__show');
   
     setTimeout(() => {
       colorElement.classList.remove('genius__show');
-    }, 700);
+    }, 300);
   }
 
   const playSoundBeep = (colorNumber) => {
