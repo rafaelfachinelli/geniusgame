@@ -156,11 +156,12 @@ body {
 
 .game__buttons {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin: 1rem 0;
 }
 
 .button__start {
+  width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -180,6 +181,25 @@ body {
 
 .button__start:hover {
   background: #2ecc71;
+}
+
+.button__sound {
+  width: 20%;
+  appearance: none;
+  padding: .5rem;
+  margin: 0 0 0 1rem;
+
+  
+  background: #2980b9 url(./images/soundOn.svg) no-repeat center;
+  background-size: 2rem 2rem;
+  border-radius: .5rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.button__sound:checked {
+  background: #c0392b url(./images/soundOff.svg) no-repeat center;
+  background-size: 1.5rem 1.5rem;
 }
 
 .game__footer {

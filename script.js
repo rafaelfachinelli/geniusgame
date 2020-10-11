@@ -5,12 +5,14 @@
   const greenElement = document.querySelector('.genius--green');
   
   const scorePointsElement = document.querySelector('.score__points');
-  
+
   const statusStartElement = document.querySelector('.status--start');
   const statusWaitElement = document.querySelector('.status--wait');
   const statusPlayerElement = document.querySelector('.status--player');
   
   const startButtonElement = document.querySelector('.button__start');
+
+  const soundButtonElement = document.querySelector('.button__sound');
   
   let playerColorsOrder = [];
   let gameColorsOrder = [];
@@ -30,10 +32,10 @@
     resetPoints();
     resetPlayerColorsOrder();
     resetGameColorsOrder();
+    newColorToOrder();
     setTimeout(()=> {
-      newColorToOrder();
       showGameColorsOrder();
-    }, 1000)
+    }, 700)
   }
   
   const checkPlayerMove = (colorNumber) => {
@@ -134,6 +136,14 @@
   const isPlayerTime = () => {
     return playerTime;
   }
+
+  const showPlayerScoreInScreen = () => {
+
+  }
+
+  const isSoundsActive = () => {
+    return soundButtonElement.checked ? false : true;
+  }
   
   //Player Controls
   
@@ -193,21 +203,23 @@
   }
 
   const playSoundBeep = (colorNumber) => {
-    resetSounds();
-
-    switch(colorNumber) {
-      case 0:
-        beep0.play();
-        break;
-      case 1:
-        beep1.play();
-        break;
-      case 2:
-        beep2.play();
-        break;
-      case 3:
-        beep3.play();
-        break;
+    if (isSoundsActive()) {
+      resetSounds();
+  
+      switch(colorNumber) {
+        case 0:
+          beep0.play();
+          break;
+        case 1:
+          beep1.play();
+          break;
+        case 2:
+          beep2.play();
+          break;
+        case 3:
+          beep3.play();
+          break;
+      }
     }
   }
 
@@ -223,7 +235,9 @@
   }
 
   const playSoundClick = () => {
-    click.play();
+    if (isSoundsActive()) {
+      click.play();
+    }
   }
   
   const statusState = (stringStatus , state) => {
