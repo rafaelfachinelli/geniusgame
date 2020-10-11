@@ -73,7 +73,10 @@
   }
 
   const saveScorePointsLastBest = () => {
-    scorePointsLastElement.innerText = scorePointsActual;
+    if (scorePointsActual > 0) {
+      scorePointsLastElement.innerText = scorePointsActual;
+    }
+    
     if (scorePointsActual > scorePointsBest) {
       scorePointsBest = scorePointsActual;
       scorePointsBestElement.innerText = scorePointsBest;
