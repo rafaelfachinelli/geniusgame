@@ -193,6 +193,8 @@
   }
 
   const playSoundBeep = (colorNumber) => {
+    resetSounds();
+
     switch(colorNumber) {
       case 0:
         beep0.play();
@@ -207,6 +209,17 @@
         beep3.play();
         break;
     }
+  }
+
+  const resetSounds = () => {
+    beep0.pause();
+    beep0.currentTime = 0;
+    beep1.pause();
+    beep1.currentTime = 0;
+    beep2.pause();
+    beep2.currentTime = 0;
+    beep3.pause();
+    beep3.currentTime = 0;
   }
 
   const playSoundClick = () => {
