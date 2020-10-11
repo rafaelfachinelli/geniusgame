@@ -121,7 +121,7 @@ body {
   opacity: 0.6;
 }
 
-.genius__block:hover {
+.genius__block:active {
   opacity: 1;
 }
 
