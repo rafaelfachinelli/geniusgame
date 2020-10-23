@@ -1,11 +1,3 @@
-<div align="center">
-
-|Título Maior Ainda|Título Maior Ainda|Título Maior Ainda|
-|---:|:---:|:---|
-|conteúdo|conteúdo|conteúdo|
-
-</div>
-
 <p align="center">
   <img alt="GENIUS Game" src=".github/logo.svg" width="200px"/>
 <p>
