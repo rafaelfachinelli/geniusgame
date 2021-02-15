@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="GENIUS Game" src=".github/logo.svg" width="200px"/>
+  <img alt="GENIUS Game" src=".github/banner.svg" width="200px"/>
 <p>
 
 <p align="center"> 
