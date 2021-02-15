@@ -106,7 +106,7 @@ Feito com ❤️ por Rafael Fachinelli 👋🏽 Entre em contato!
 
 <div align="center">
   
-Copyright © 2020 [Rafael Fachinelli](https://github.com/rafaelfachinelli).<br />
+Copyright © 2021 [Rafael Fachinelli](https://github.com/rafaelfachinelli).<br />
 Este projeto é licenciado pelo [MIT](./LICENSE).
 
 </div>
